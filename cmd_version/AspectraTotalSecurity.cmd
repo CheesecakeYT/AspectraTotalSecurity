@@ -28,6 +28,8 @@ rem ----------------------------------------------------------------------------
 
 set md5=%md5: =%
 
+if "%md5%" == "9b533c3e1e028eff67c9f97ead1cf7c8" set threat=Win32.Ransom.7ev3n.A
+if "%md5%" == "768a4aa523b9d3f3bc44b4ebdee706dc" set threat=Win32.Ransom.7ev3n.B
 if "%md5%" == "63d4e4dac57bd7d2059587eba4162652" set threat=Win32.Ransom.SureRansom.A
 
 rem --------------------------------------------------------------------------------------------------------------------
