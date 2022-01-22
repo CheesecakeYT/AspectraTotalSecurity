@@ -92,6 +92,7 @@ goto licencni_klic
   set /p volba="Prosíme, zvolte volbu: "
   if /i "%volba%" == "info" goto info
   if /i "%volba%" == "zpět" goto menu
+  if /i "%volba%" == "nahlásit" goto nahlásit
   
 :info
   cls
@@ -108,6 +109,14 @@ goto licencni_klic
   echo Copyright Aspectra 2022.
   pause
   goto nastaveni
+  
+  :nahlásit
+  cls
+  echo Aspectra Total Security
+  echo Loading... 
+  echo.
+  echo starting...
+  start https://martinekmatej.wixsite.com/aspectra/contact
 
 :sken
   cls
