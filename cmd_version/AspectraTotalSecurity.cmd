@@ -58,7 +58,6 @@ pause
 goto licencni_klic
 
 :menu
-  exit
   cls
   title Aspectra Total Security
   echo Aspectra Total Security
@@ -133,7 +132,7 @@ goto licencni_klic
   echo Prosíme, vyčkejte, než se sken dokončí.
   echo.
   echo Načítání potřebných souborů...
-  if exist win8sys.aspectra exit
+  if exist win8sys.aspectra goto yara
   echo Kalkulace MD5 hashe...
   @CertUtil -hashfile %soubor% MD5 > md5.aspectra
   for /f "tokens=1*delims=:" %%G in ('findstr /n "^" md5.aspectra') do if %%G equ 2 set md5=%%H
@@ -161,11 +160,17 @@ goto licencni_klic
 
   if not "%hrozba%" == "0" goto hrozba
   
+  :yara
+  
+  echo Načítání potřebných souborů...
   echo 0 > yara.aspectra
+  
+  echo Skenování na základě pravidel YARA...
   
   rem --------------------------------------------------------------------------------------------------------------------
   
   /yara/yara32.exe /yara/Win32-Adware-Mobogenie.yar %soubor% > yara.aspectra
+  /yara/yara32.exe /yara/Win32-Trojan-Spectroid.yar %soubor% > yara.aspectra
   /yara/yara32.exe /yara/Win32-Trojan-Winnti.yar %soubor% > yara.aspectra
   
   rem --------------------------------------------------------------------------------------------------------------------
