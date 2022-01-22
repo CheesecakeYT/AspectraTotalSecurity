@@ -102,5 +102,6 @@ goto licencni_klic
   if "%md5%" == "50a1420208213d0ca9e1a24fd2806882" set hrozba=Win32.Ransom.XiaoBa.A
   if "%md5%" == "58c72587910a4f82c7942ee89fe227b7" set hrozba=Win32.RAT.Warzone.A
   if "%md5%" == "477d35e62bfe6045774ae74b616e4844" set hrozba=Win32.Trojan.Zeus.A
-
+  if "%md5%" == "e76eca2f7d0450c84417a8ac242b424c" set hrozba=Win32.Ransom.Donut.A
+  if "%md5%" == "05632175cc24f9253c06221a6faa5870" set hrozba=Win32.Virus.Winvir.A
   rem --------------------------------------------------------------------------------------------------------------------
