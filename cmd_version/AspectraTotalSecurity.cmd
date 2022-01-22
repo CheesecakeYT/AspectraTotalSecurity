@@ -1,6 +1,34 @@
 @echo off
 
+systeminfo | findstr /B /C:"OS Name" > operacnisystem.aspectra
+find /i /c "Microsoft Windows 8" operacnisystem.aspectra >NUL
+if %errorlevel% equ 0 (
+  del operacnisystem.aspectra
+  cls
+  title Je požadována vaše akce - Aspectra Total Security
+  echo Aspectra Total Security
+  echo.
+  echo Je požadována vaše akce.
+  echo.
+  echo.
+  echo Bylo detekováno, že používáte Microsoft Windows 8.
+  echo Tento operační systém nemusí být plně kompatibilní s Aspectra Total
+  echo Security, a proto budou některé funkce vypnuty a na skeny bude
+  echo užívána pouze jedna ze dvou metod. Toto může mít za následek
+  echo označení viru jako bezpečný soubor. Využívání Aspectra Total
+  echo Security však nebude omezeno úplně a všechny kompatibilní funkce
+  echo budou přístupné.
+  echo.
+  echo Pokračováním s tímto počítáte.
+  pause
+) else (
+  del operacnisystem.aspectra
+)
+
+if exist lcncklc.aspectra goto menu
+
 :licencni_klic
+cls
 title Je požadována vaše akce - Aspectra Total Security
 echo Aspectra Total Security
 echo.
@@ -25,12 +53,21 @@ if /i "%klic%" == "SAXHP-IY7DC-ORJU5-6HG7A-LQVCC" (
 echo.
 echo Vámi zadaný klíč nebyl přijat.
 pause
-goto 
+goto licencni_klic
 
 :menu
   exit
   cls
   title Aspectra Total Security
+  echo Aspectra Total Security
+  echo.
+  echo Jste zabezpečeni.
+  echo.
+  echo.
+  echo (OPUSTIT) - zavře Aspectra Total Security.
+  echo.
+  set /p volba="Prosíme, zadejte vaši volbu: "
+  if /i "%volba%" == "opustit" exit
 
 rem --------------------------------------------------------------------------------------------------------------------
 
