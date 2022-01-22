@@ -87,12 +87,13 @@ goto licencni_klic
   echo.
   echo.
   echo (INFO) - zobrazí informace o Aspectra Total Security.
+  echo (NAHLÁSIT) - nahlásí chybu, špatně označený program apod.
   echo (ZPĚT) - přejde zpět do menu.
   echo.
   set /p volba="Prosíme, zvolte volbu: "
   if /i "%volba%" == "info" goto info
+  if /i "%volba%" == "nahlásit" start https://martinekmatej.wixsite.com/aspectra/contact
   if /i "%volba%" == "zpět" goto menu
-  if /i "%volba%" == "nahlásit" goto nahlásit
   
 :info
   cls
@@ -109,14 +110,6 @@ goto licencni_klic
   echo Copyright Aspectra 2022.
   pause
   goto nastaveni
-  
-  :nahlásit
-  cls
-  echo Aspectra Total Security
-  echo Loading... 
-  echo.
-  echo starting...
-  start https://martinekmatej.wixsite.com/aspectra/contact
 
 :sken
   cls
