@@ -67,15 +67,47 @@ goto licencni_klic
   echo.
   echo.
   echo (SKEN) - začne skenovat.
+  echo (NASTAVENÍ) - zobrazí možnosti nastavení.
   echo (OPUSTIT) - zavře Aspectra Total Security.
   echo.
   set /p volba="Prosíme, zvolte volbu: "
   if /i "%volba%" == "sken" goto sken
+  if /i "%volba%" == "nastavení" goto nastaveni
   if /i "%volba%" == "opustit" exit
   echo.
   echo Toto není platná volba.
   pause
   goto menu
+  
+:nastaveni
+  cls
+  echo Aspectra Total Security
+  echo.
+  echo Jste zabezpečeni.
+  echo.
+  echo.
+  echo (INFO) - zobrazí informace o Aspectra Total Security.
+  echo (ZPĚT) - přejde zpět do menu.
+  echo.
+  set /p volba="Prosíme, zvolte volbu: "
+  if /i "%volba%" == "info" goto info
+  if /i "%volba%" == "zpět" goto menu
+  
+:info
+  cls
+  echo Aspectra Total Security
+  echo.
+  echo Informace
+  echo.
+  echo.
+  echo Aspectra Total Security
+  echo.
+  echo Experimentální verze
+  echo Edice c921b374-8e42-4bc5-bc49-a6b9842b207b
+  echo.
+  echo Copyright Aspectra 2022.
+  pause
+  goto nastaveni
 
 :sken
   cls
@@ -183,6 +215,10 @@ goto licencni_klic
     pause
     goto sken
   )
+  echo.
+  echo Toto není platná volba.
+  pause
+  goto hrozba
 
 :bezpecny
   cls
