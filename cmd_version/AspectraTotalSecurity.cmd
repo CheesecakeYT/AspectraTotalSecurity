@@ -157,6 +157,19 @@ goto licencni_klic
   
   rem --------------------------------------------------------------------------------------------------------------------
 
+  if not "%hrozba%" == "0" goto hrozba
+  
+  echo 0 > yara.aspectra
+  
+  rem --------------------------------------------------------------------------------------------------------------------
+  
+  /yara/yara32.exe /yara/Win32-Adware-Mobogenie.yar %soubor% > yara.aspectra
+  /yara/yara32.exe /yara/Win32-Trojan-Winnti.yar %soubor% > yara.aspectra
+  
+  rem --------------------------------------------------------------------------------------------------------------------
+
+  set /p hrozba=<yara.aspectra
+  del yara.aspectra
   if "%hrozba%" == "0" goto bezpecny
   
 :hrozba
