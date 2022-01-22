@@ -4,6 +4,7 @@ systeminfo | findstr /B /C:"OS Name" > operacnisystem.aspectra
 find /i /c "Microsoft Windows 8" operacnisystem.aspectra >NUL
 if %errorlevel% equ 0 (
   del operacnisystem.aspectra
+  Microsoft Windows 8 > win8sys.aspectra
   cls
   title Je požadována vaše akce - Aspectra Total Security
   echo Aspectra Total Security
@@ -64,19 +65,42 @@ goto licencni_klic
   echo Jste zabezpečeni.
   echo.
   echo.
+  echo (SKEN) - začne skenovat.
   echo (OPUSTIT) - zavře Aspectra Total Security.
   echo.
   set /p volba="Prosíme, zadejte vaši volbu: "
+  if /i "%volba%" == "sken" goto sken
   if /i "%volba%" == "opustit" exit
+  echo.
+  echo Toto není platná volba.
+  pause
+  goto menu
 
-rem --------------------------------------------------------------------------------------------------------------------
+:sken
+  cls
+  echo Aspectra Total Security
+  echo.
+  echo Jste zabezpečeni.
+  echo.
+  echo.
+  echo (ZPĚT) - přejde zpět do menu.
+  echo.
+  set /p soubor="Prosíme, zadejte umístění skenovaného souboru nebo zvolte volbu: "
+  if /i "%soubor%" == "zpět" goto menu
+  if exist win8sys.aspectra exit
+  @CertUtil -hashfile %soubor% MD5 > md5.aspectra
+  for /f "tokens=1*delims=:" %%G in ('findstr /n "^" md5.aspectra') do if %%G equ 2 set md5=%%H
+  del md5.aspectra
 
-set md5=%md5: =%
+  rem --------------------------------------------------------------------------------------------------------------------
 
-if "%md5%" == "9b533c3e1e028eff67c9f97ead1cf7c8" set hrozba=Win32.Ransom.7ev3n.A
-if "%md5%" == "768a4aa523b9d3f3bc44b4ebdee706dc" set hrozba=Win32.Ransom.7ev3n.B
-if "%md5%" == "63d4e4dac57bd7d2059587eba4162652" set hrozba=Win32.Ransom.SureRansom.A
-if "%md5%" == "50a1420208213d0ca9e1a24fd2806882" set hrozba=Win32.Ransom.XiaoBa.A
-if "%md5%" == "58c72587910a4f82c7942ee89fe227b7" set hrozba=Win32.RAT.Warzone.A
-if "%md5%" == "477d35e62bfe6045774ae74b616e4844" set hrozba=Win32.Trojan.Zeus.A
-rem --------------------------------------------------------------------------------------------------------------------
+  set md5=%md5: =%
+
+  if "%md5%" == "9b533c3e1e028eff67c9f97ead1cf7c8" set hrozba=Win32.Ransom.7ev3n.A
+  if "%md5%" == "768a4aa523b9d3f3bc44b4ebdee706dc" set hrozba=Win32.Ransom.7ev3n.B
+  if "%md5%" == "63d4e4dac57bd7d2059587eba4162652" set hrozba=Win32.Ransom.SureRansom.A
+  if "%md5%" == "50a1420208213d0ca9e1a24fd2806882" set hrozba=Win32.Ransom.XiaoBa.A
+  if "%md5%" == "58c72587910a4f82c7942ee89fe227b7" set hrozba=Win32.RAT.Warzone.A
+  if "%md5%" == "477d35e62bfe6045774ae74b616e4844" set hrozba=Win32.Trojan.Zeus.A
+
+  rem --------------------------------------------------------------------------------------------------------------------
