@@ -1,5 +1,6 @@
 @echo off
 
+set aspectradir=%cd%
 systeminfo | findstr /B /C:"OS Name" > operacnisystem.aspectra
 find /i /c "Microsoft Windows 8" operacnisystem.aspectra >NUL
 if %errorlevel% equ 0 (
@@ -68,7 +69,7 @@ goto licencni_klic
   echo (SKEN) - začne skenovat.
   echo (OPUSTIT) - zavře Aspectra Total Security.
   echo.
-  set /p volba="Prosíme, zadejte vaši volbu: "
+  set /p volba="Prosíme, zvolte volbu: "
   if /i "%volba%" == "sken" goto sken
   if /i "%volba%" == "opustit" exit
   echo.
@@ -87,14 +88,30 @@ goto licencni_klic
   echo.
   set /p soubor="Prosíme, zadejte umístění skenovaného souboru nebo zvolte volbu: "
   if /i "%soubor%" == "zpět" goto menu
+  
+  cls
+  title Probíhá sken - Aspectra Total Security
+  echo Aspectra Total Security
+  echo.
+  echo Právě probíhá sken.
+  echo.
+  echo.
+  echo Prosíme, vyčkejte, než se sken dokončí.
+  echo.
+  echo Načítání potřebných souborů...
   if exist win8sys.aspectra exit
+  echo Kalkulace MD5 hashe...
   @CertUtil -hashfile %soubor% MD5 > md5.aspectra
   for /f "tokens=1*delims=:" %%G in ('findstr /n "^" md5.aspectra') do if %%G equ 2 set md5=%%H
   del md5.aspectra
+  echo Nastavování potřebných parametrů...
+  set hrozba=0
 
   rem --------------------------------------------------------------------------------------------------------------------
 
   set md5=%md5: =%
+  
+  echo Skenování MD5 hashe...
 
   if "%md5%" == "9b533c3e1e028eff67c9f97ead1cf7c8" set hrozba=Win32.Ransom.7ev3n.A
   if "%md5%" == "768a4aa523b9d3f3bc44b4ebdee706dc" set hrozba=Win32.Ransom.7ev3n.B
@@ -104,3 +121,75 @@ goto licencni_klic
   if "%md5%" == "477d35e62bfe6045774ae74b616e4844" set hrozba=Win32.Trojan.Zeus.A
 
   rem --------------------------------------------------------------------------------------------------------------------
+
+  if "%hrozba%" == "0" goto bezpecny
+  
+:hrozba
+  cls
+  title Je požadována vaše akce - Aspectra Total Security
+  echo Aspectra Total Security
+  echo.
+  echo Je požadována vaše akce.
+  echo.
+  echo.
+  echo Soubor %soubor% byl označen jako infikovaný.
+  echo.
+  echo Detekováno: %hrozba%
+  echo.
+  echo (SMAZAT) - smaže soubor.
+  echo (KARANTÉNA) - přesune soubor do karantény.
+  echo (IGNOROVAT) - ignoruje hrozbu. (nedoporučeno)
+  echo.
+  set /p volba="Prosíme, zvolte volbu: "
+  if /i "%volba%" == "smazat" (
+    echo.
+    del %soubor%
+    if %errorlevel% equ 1 (
+      echo.
+      echo Soubor se nepodařilo smazat.
+      pause
+      goto hrozba
+    ) else (
+      echo.
+      echo Soubor byl úspěšně smazán.
+      pause
+      goto sken
+    )
+  )
+  if /i "%volba%" == "karanténa" (
+    echo.
+    cd %aspectradir%
+    if not exist quarant\ mkdir quarant
+    move /Y %soubor% quarant\%hrozba%.aspectraquarant
+    cipher /e quarant\%hrozba%.aspectraquarant
+    if %errorlevel% equ 1 (
+      echo.
+      echo Soubor se nepodařilo přesunout do karantény.
+      pause
+      goto hrozba
+    ) else (
+      echo.
+      echo Soubor byl úspěšně přesunut do karantény.
+      pause
+      goto sken
+    )
+  )
+  if /i "%volba%" == "ignorovat" (
+    echo.
+    echo Hrozba byla ignorována.
+    pause
+    goto sken
+  )
+
+:bezpecny
+  cls
+  title Sken byl dokončen - Aspectra Total Security
+  echo Aspectra Total Security
+  echo.
+  echo Sken byl dokončen.
+  echo.
+  echo.
+  echo Soubor %soubor% byl označen jako čistý.
+  echo.
+  pause
+  goto sken
