@@ -1,4 +1,4 @@
-rule Win32.Trojan.Spectroid.A {
+rule Win32/Trojan/Spectroid/A {
    meta:
       description = "Unknown malware mentioned by Cylance"
       license = "Detection Rule License 1.1 https://github.com/Neo23x0/signature-base/blob/master/LICENSE"
