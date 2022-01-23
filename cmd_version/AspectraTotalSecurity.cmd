@@ -146,9 +146,11 @@ goto licencni_klic
   
   echo Skenování MD5 hashe...
 
+  if "%md5%" == "7ab91e57a1e2752cd8abee3db10853c5" set hrozba=Win32.Ransom.AngryDuck
   if "%md5%" == "9b533c3e1e028eff67c9f97ead1cf7c8" set hrozba=Win32.Ransom.7ev3n.A
   if "%md5%" == "768a4aa523b9d3f3bc44b4ebdee706dc" set hrozba=Win32.Ransom.7ev3n.B
   if "%md5%" == "e76eca2f7d0450c84417a8ac242b424c" set hrozba=Win32.Ransom.Donut.A
+  if "%md5%" == "002fa5e60703f6178140ec644c298716" set hrozba=Win32.Virus.Gollum
   if "%md5%" == "63d4e4dac57bd7d2059587eba4162652" set hrozba=Win32.Ransom.SureRansom.A
   if "%md5%" == "50a1420208213d0ca9e1a24fd2806882" set hrozba=Win32.Ransom.XiaoBa.A
   if "%md5%" == "e4bb04fe99f81331aa57a5c17b4c9111" set hrozba=Win32.Ransom.Xorist.A
