@@ -188,9 +188,10 @@ goto licencni_klic
   
   rem --------------------------------------------------------------------------------------------------------------------
   
-  start %aspectradir%/yara/yara32.exe Win32-Adware-Mobogenie.yar %soubor% > yara.aspectra
-  start %aspectradir%/yara/yara32.exe Win32-Trojan-Spectroid.yar %soubor% > yara.aspectra
-  start %aspectradir%/yara/yara32.exe Win32-Trojan-Winnti.yar %soubor% > yara.aspectra
+  start yara32.exe EicarTestFile.yar %soubor% > yara.aspectra
+  start yara32.exe Win32-Adware-Mobogenie.yar %soubor% > yara.aspectra
+  start yara32.exe Win32-Trojan-Spectroid.yar %soubor% > yara.aspectra
+  start yara32.exe Win32-Trojan-Winnti.yar %soubor% > yara.aspectra
   
   rem --------------------------------------------------------------------------------------------------------------------
 
