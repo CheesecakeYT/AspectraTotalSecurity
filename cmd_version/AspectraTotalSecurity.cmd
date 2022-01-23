@@ -161,6 +161,9 @@ goto licencni_klic
   if not "%hrozba%" == "0" goto hrozba
   
   :yara
+  echo Přesouvání do databáze...
+  cd %aspectradir%
+  cd yara
   
   echo Načítání potřebných souborů...
   echo 0 > yara.aspectra
@@ -169,9 +172,9 @@ goto licencni_klic
   
   rem --------------------------------------------------------------------------------------------------------------------
   
-  /yara/yara32.exe /yara/Win32-Adware-Mobogenie.yar %soubor% > yara.aspectra
-  /yara/yara32.exe /yara/Win32-Trojan-Spectroid.yar %soubor% > yara.aspectra
-  /yara/yara32.exe /yara/Win32-Trojan-Winnti.yar %soubor% > yara.aspectra
+  yara32.exe Win32-Adware-Mobogenie.yar %soubor% > yara.aspectra
+  yara32.exe Win32-Trojan-Spectroid.yar %soubor% > yara.aspectra
+  yara32.exe Win32-Trojan-Winnti.yar %soubor% > yara.aspectra
   
   rem --------------------------------------------------------------------------------------------------------------------
 
