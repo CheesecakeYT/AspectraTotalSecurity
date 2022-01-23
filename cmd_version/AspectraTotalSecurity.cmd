@@ -1,6 +1,22 @@
 @echo off
 
-set aspectradir=%cd%
+if not exist flpth.aspectra (
+  cls
+  title Je požadována vaše akce - Aspectra Total Security
+  echo Aspectra Total Security
+  echo.
+  echo Je požadována vaše akce.
+  echo.
+  echo.
+  echo Vzhledem k neznámé chybě od vás žádáme umístění složky, ze které
+  echo je Aspectra Total Security spouštěn.
+  echo.
+  set /p aspectradir="Prosíme, zadejte umístění složky: "
+  echo %aspectradir% > flpth.aspectra
+  cls
+)
+set /p aspectradir=<flpth.aspectra
+
 systeminfo | findstr /B /C:"OS Name" > operacnisystem.aspectra
 find /i /c "Microsoft Windows 8" operacnisystem.aspectra >NUL
 if %errorlevel% equ 0 (
