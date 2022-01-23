@@ -1,4 +1,4 @@
-rule Win32-Adware-Mobogenie-A {
+rule Win32_Adware_Mobogenie_A {
    meta:
       description = "Mobogenie signature mentioned by Cylance"
       license = "Detection Rule License 1.1 https://github.com/Neo23x0/signature-base/blob/master/LICENSE"
