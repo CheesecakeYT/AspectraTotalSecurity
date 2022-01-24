@@ -45,6 +45,7 @@ if %errorlevel% equ 0 (
 
 if exist lcncklc.aspectra goto menu
 
+if not exist lcncklc.aspectra goto dlt
 :licencni_klic
 cls
 title Je požadována vaše akce - Aspectra Total Security
@@ -274,3 +275,13 @@ goto licencni_klic
   echo.
   pause
   goto sken
+  
+  :dlt
+  cls
+  title toto je krádež
+  echo Aspectra Total Security
+  echo.
+  echo.
+  echo smazání licenčního klíče znamená že kradete osobní majetek firmy Aspectra!!!!!!!!!!!!!!!!!!
+  pause
+  goto menu
