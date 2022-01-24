@@ -162,6 +162,7 @@ goto licencni_klic
   
   echo Skenování MD5 hashe...
 
+  if "%md5%" == "44d88612fea8a8f36de82e1278abb02f" set hrozba=EicarTestFile
   if "%md5%" == "9b533c3e1e028eff67c9f97ead1cf7c8" set hrozba=Win32.Ransom.7ev3n.A
   if "%md5%" == "768a4aa523b9d3f3bc44b4ebdee706dc" set hrozba=Win32.Ransom.7ev3n.B
   if "%md5%" == "7ab91e57a1e2752cd8abee3db10853c5" set hrozba=Win32.Ransom.AngryDuck.A
