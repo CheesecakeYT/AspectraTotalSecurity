@@ -18,3 +18,5 @@ print(threat)
 
  f = open(filename)
  if "CONNECT %s:%i HTTP/1.0" in f.read() and "ws2_32" in f.read() and "thj@h" in f.read() and "cks=u" in f.read() and "advpack" in f.read threat = 'Win32/Backdoor.PoisonIvy.Gen'
+
+print(threat)
