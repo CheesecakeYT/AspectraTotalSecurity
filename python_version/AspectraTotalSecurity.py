@@ -15,3 +15,6 @@ if sha256 == 'fc50cce8b75c8561ff073d697f51278b7638ceda4a9d3b6fe7ba89f0b322c002' 
 if sha256 == '181f864212bddd3099d2cb7089a291a4d470387c498e615bb6220de83bfb6a37' threat = 'Win32/Worm.LoveLetter.A'
 
 print(threat)
+
+ f = open(filename)
+ if "CONNECT %s:%i HTTP/1.0" in f.read() and "ws2_32" in f.read() and "thj@h" in f.read() and "cks=u" in f.read() and "advpack" in f.read threat = 'Win32/Backdoor.PoisonIvy.Gen'
