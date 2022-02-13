@@ -9,14 +9,18 @@ if sha256 == '54874e12ae06ef90e784b87adc6ae771240d09b527a9dc02ea8de527db3f6312' 
 if sha256 == 'f89345b3f5e45b76e49c61ab5db44db384350e20230de897dd548f2fd9c752c0' threat = 'DOS/Virus.Holiday.A'
 if sha256 == '9233e922427985ad5fb2826ca7833148b57ce00a316d1611e1429e94ae4d5c93' threat = 'DOS/Virus.Virdem.A'
 if sha256 == 'ff01fcc87a878d702261930565df55fbfd686f39345f362b830a530866002c06' threat = 'DOS/Virus.Wisconsin.A'
+if sha256 == 'b860c85038a5e4278a887812fbc26d1588dd14087e2c44667fdd21ea76b62644' threat = 'Linux/Virus.Sickabs.A'
 if sha256 == 'b9cb9b6547dd95b1e78ab335ff4768223b58478d261b3e8adc57541fa488955b' threat = 'Win32/Backdoor.Okrum.A'
 if sha256 == 'd038b700388148cbf5d7a4192e123da0b6f15e3dbd28ebee3f2b263fdd6f6b85' threat = 'Win32/Backdoor.PoisonIvy.A'
+if sha256 == 'cd13fc0d90311a2412effdbb314b61dd5bc42bd01d0a80c59d3bd51bcd1e578f' threat = 'Win32/Ransom.AWT.A'
 if sha256 == 'c18a52f4a2064124f1bfff0757b1d7f7aa6df10bd3e4f2f4270cf3625c73831e' threat = 'Win32/Ransom.DirtyDecrypt.A'
 if sha256 == 'e049d8f69ddee0c2d360c27b98fa9e61b7202bb0d3884dd3ca63f8aa288422dc' threat = 'Win32/Ransom.EternalRocks.A'
 if sha256 == '8da8fb1e26164d18e849cfcad5ca222da395a1ef43f4a528ae758375372d13ef' threat = 'Win32/Ransom.NETCrypton.A'
 if sha256 == 'df96eb9c4ef47f5c20662c037c32f11d777802e67df091c60d6fcd82ff1b818e' threat = 'Win32/Ransom.Phobos.A'
 if sha256 == '23d3f8aa6e5d072259dd8aeeb4fbe70ca6bbfdfbb4be3b7166b6c399d836bee2' threat = 'Win32/Ransom.Rijndael.A'
 if sha256 == '13c92506e1ec7986e4ead73470f5516bf1c01f25b46989551c67c22dba76bead' threat = 'Win32/Ransom.WannaCryptor.A'
+if sha256 == '83ecb875f87150a88f4c3d496eb3cb5388cd8bafdff4879884ececdbd1896e1d' threat = 'Win32/Rogue.NavaShield.A'
+if sha256 == '08b6f3ec3171995a4c96a8ba316543ca299502a3a5d8eecd6e37e3cf01cb7ae3' threat = 'Win32/Rogue.NavaShield.B'
 if sha256 == 'd038ca188c724d148f878edfdeb39f35cc02d9c1e0ca3c5c1de5da9c79062c92' threat = 'Win32/Rogue.SystemSecurity.A'
 if sha256 == '50200a4b836cc4b8a7503bf28fba98ebc54bdd423660dc890a6669cc097a5729' threat = 'Win32/Virus.Blackbat.A'
 if sha256 == '59fe169797953f2046b283235fe80158ebf02ba586eabfea306402fba8473dae' threat = 'Win32/Worm.CodeRed.A'
@@ -35,7 +39,7 @@ print(threat)
 f = open(filename)
 
 if "CONNECT %s:%i HTTP/1.0" in f.read() and "ws2_32" in f.read() and "thj@h" in f.read() and "cks=u" in f.read() and "advpack" in f.read() threat = 'Win32/Backdoor.PoisonIvy.Gen'
-if "EaseUSHelper" in f.read() and "WARNING" in f.read() and 'ARE YOU SURE YOU WANT TO EXECUTE THIS RANSOMWARE?' in f.read() threat = 'Win32/Ransom.NETCrypton.Gen'\
+if "EaseUSHelper" in f.read() and "WARNING" in f.read() and 'ARE YOU SURE YOU WANT TO EXECUTE THIS RANSOMWARE?' in f.read() threat = 'Win32/Ransom.NETCrypton.Gen'
 if "AV Intelligent Updater" in f.read() and "Please select email address to send at your friend" in f.read() and 'Select email address with ' in f.read() threat = 'Win32/Worm.Totilix.Gen'
 
 print(threat)
