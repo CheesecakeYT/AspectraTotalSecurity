@@ -5,6 +5,7 @@ sha256.replace(' ', '')
 
 if sha256 == 'f9855faa9de74bad527e685c774a4657074ac0413397e63c5543b587e7504156' threat = 'DOS/Virus.Cruncher.A'
 if sha256 == '6dd6e06d6c7aea56b4d55c0207e7e825c33d5af67a546a0c2f37a767c79e54e1' threat = 'DOS/Virus.Fellow.A'
+if sha256 == '88175d899be2458041895314e447b647811f2950ee30a6854f77a22b91a36df9' threat = 'DOS/Virus.Girls.A'
 if sha256 == '54874e12ae06ef90e784b87adc6ae771240d09b527a9dc02ea8de527db3f6312' threat = 'DOS/Virus.Mummy.A'
 if sha256 == 'f89345b3f5e45b76e49c61ab5db44db384350e20230de897dd548f2fd9c752c0' threat = 'DOS/Virus.Holiday.A'
 if sha256 == '9233e922427985ad5fb2826ca7833148b57ce00a316d1611e1429e94ae4d5c93' threat = 'DOS/Virus.Virdem.A'
@@ -33,6 +34,7 @@ if sha256 == '608e4a3d458c72c5463cc26eaf2c6b560b02a3a53be40e59de3e4b222d30cb2a' 
 if sha256 == '8e879cbfab7f2af00dd1e6f21a322c409e929c4ce57e8fe7ab30ddce456b9576' threat = 'Win32/Worm.Doomjuice.E'
 if sha256 == 'fc50cce8b75c8561ff073d697f51278b7638ceda4a9d3b6fe7ba89f0b322c002' threat = 'Win32/Worm.Doomjuice.F'
 if sha256 == '181f864212bddd3099d2cb7089a291a4d470387c498e615bb6220de83bfb6a37' threat = 'Win32/Worm.LoveLetter.A'
+if sha256 == '068f2ee28af7645dbf2a1684f0a5fc5ccb6aa1027f71da4468e0cba56c65e058' threat = 'Win32/Worm.Magistr.A'
 if sha256 == 'e6cfdb31aa9a6a08bc428b2775be26eef7599cad0bb21948d280d5a3e5ddf150' threat = 'Win32/Worm.Totilix.A'
 
 print(threat)
@@ -40,7 +42,9 @@ print(threat)
 f = open(filename)
 
 if "CONNECT %s:%i HTTP/1.0" in f.read() and "ws2_32" in f.read() and "thj@h" in f.read() and "cks=u" in f.read() and "advpack" in f.read() threat = 'Win32/Backdoor.PoisonIvy.Gen'
+if "/[Aa]ccept\-[Ee]ncoding: [a-z\-]{1,16},([a-z\-\s]{1,16},|)*[\s]{1,20},/" in f.read() threat = 'Win32/Exploit.CVE-2021-31166.Gen'
 if "EaseUSHelper" in f.read() and "WARNING" in f.read() and 'ARE YOU SURE YOU WANT TO EXECUTE THIS RANSOMWARE?' in f.read() threat = 'Win32/Ransom.NETCrypton.Gen'
 if "AV Intelligent Updater" in f.read() and "Please select email address to send at your friend" in f.read() and 'Select email address with ' in f.read() threat = 'Win32/Worm.Totilix.Gen'
+if "" 
 
 print(threat)
