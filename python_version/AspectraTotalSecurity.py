@@ -14,8 +14,12 @@ if sha256 == 'b860c85038a5e4278a887812fbc26d1588dd14087e2c44667fdd21ea76b62644' 
 if sha256 == 'f6c62cda8576e3662498bed18196e1fd038e26ed46c7da8bbeb4e68e49ec0a27' threat = 'Win32/Backdoor.BackConstruction.A'
 if sha256 == 'b9cb9b6547dd95b1e78ab335ff4768223b58478d261b3e8adc57541fa488955b' threat = 'Win32/Backdoor.Okrum.A'
 if sha256 == 'd038b700388148cbf5d7a4192e123da0b6f15e3dbd28ebee3f2b263fdd6f6b85' threat = 'Win32/Backdoor.PoisonIvy.A'
+if sha256 == '10bfd9746863fd90e7c7b204a2a0a0c529f12b5a7dea51858e81f32698c168f8' threat = 'Win32/CoinMiner.Herxmin.A'
 if sha256 == 'f9b6015249a88411772a6631078938e96024c5cf6f83f1ed69437eb7947731a0' threat = 'Win32/PUP.EndermanchMalwareDatabase.A'
 if sha256 == 'cd13fc0d90311a2412effdbb314b61dd5bc42bd01d0a80c59d3bd51bcd1e578f' threat = 'Win32/Ransom.AWT.A'
+if sha256 == '08cf8ed94cc1ef6ae23133f3e506a50d8aad9047c6fa74568a0373d991261aa4' threat = 'Win32/Ransom.Defray.A'
+if sha256 == '71089d862e3bb4c3a351252fcd6d9018866c265707508ed397f3efcdf3702723' threat = 'Win32/Ransom.Defray.B'
+if sha256 == '6543ad7d8b6701448a45072b2133bb24dc53a23247e1815a8e6d9bfe9cfc28c6' threat = 'Win32/Ransom.Defray.C'
 if sha256 == 'c18a52f4a2064124f1bfff0757b1d7f7aa6df10bd3e4f2f4270cf3625c73831e' threat = 'Win32/Ransom.DirtyDecrypt.A'
 if sha256 == 'e049d8f69ddee0c2d360c27b98fa9e61b7202bb0d3884dd3ca63f8aa288422dc' threat = 'Win32/Ransom.EternalRocks.A'
 if sha256 == '55f1ce7d7b3cf941ea355a07623b02a6ec2007d1f5069717a449dd31405bb86b' threat = 'Win32/Ransom.Keslan.A'
@@ -29,6 +33,7 @@ if sha256 == '246333f2fac7a9a4c7b3b7d4b68b7c00effe9bf0f1019187270bafc9a2f86f7a' 
 if sha256 == '83ecb875f87150a88f4c3d496eb3cb5388cd8bafdff4879884ececdbd1896e1d' threat = 'Win32/Rogue.NavaShield.A'
 if sha256 == '08b6f3ec3171995a4c96a8ba316543ca299502a3a5d8eecd6e37e3cf01cb7ae3' threat = 'Win32/Rogue.NavaShield.B'
 if sha256 == 'd038ca188c724d148f878edfdeb39f35cc02d9c1e0ca3c5c1de5da9c79062c92' threat = 'Win32/Rogue.SystemSecurity.A'
+if sha256 == '569cf8b606e33cfc34c8bd97839b8b827758051ff696ebaddf26ea9fd953ce98' threat = 'Win32/Trojan.Agent.A'
 if sha256 == '47f6d3a11ffd015413ffb96432ec1f980fba5dd084990dd61a00342c5f6da7f8' threat = 'Win32/Trojan.NoEscape.A'
 if sha256 == '9d3fe04d88c401178165f7fbdf307ac0fb690cc5fef8b70ee7f380307d4748f8' threat = 'Win32/Trojan.000.A'
 if sha256 == '50200a4b836cc4b8a7503bf28fba98ebc54bdd423660dc890a6669cc097a5729' threat = 'Win32/Virus.Blackbat.A'
@@ -44,6 +49,8 @@ if sha256 == '181f864212bddd3099d2cb7089a291a4d470387c498e615bb6220de83bfb6a37' 
 if sha256 == '6c65feef8c7fd68585e3b91cd4180211889d75c47776057d996717a7f0699d23' threat = 'Win32/Worm.LoveLetter.B'
 if sha256 == '88376cc51b37ab8c335f821c1129a0e8600dab9605e5d775933bcd7ceedfac8c' threat = 'Win32/Worm.Nimda.A'
 if sha256 == 'e6cfdb31aa9a6a08bc428b2775be26eef7599cad0bb21948d280d5a3e5ddf150' threat = 'Win32/Worm.Totilix.A'
+if sha256 == '8e1260bbf43e54ef60672fc2efac525e961b5dee67146063aefcfda2d7161d89' threat = 'Win64/Trojan.Crackonosh.A'
+if sha256 == '3335ec57681b238846e0d19a3459dc739d11dfaf36722b7f19e609a96b97ad92' threat = 'Win64/Trojan.NSSManager.A'
 
 print(threat)
 
@@ -51,6 +58,8 @@ f = open(filename)
 
 if "CONNECT %s:%i HTTP/1.0" in f.read() and "ws2_32" in f.read() and "thj@h" in f.read() and "cks=u" in f.read() and "advpack" in f.read() threat = 'Win32/Backdoor.PoisonIvy.Gen'
 if "EaseUSHelper" in f.read() and "WARNING" in f.read() and 'ARE YOU SURE YOU WANT TO EXECUTE THIS RANSOMWARE?' in f.read() threat = 'Win32/Ransom.NETCrypton.Gen'
+if "There's no Epic Games folder!!! Do you even Fortnite, bro?" in f.read() and "Trojan.Win32.Fonite" in f.read() and "by Valzentia" in f.read() and "Epic Games is a disease" in f.read() threat = 'Win32/Trojan.Fonite.Gen'
 if "AV Intelligent Updater" in f.read() and "Please select email address to send at your friend" in f.read() and 'Select email address with ' in f.read() threat = 'Win32/Worm.Totilix.Gen'
+if "NSSM: The non-sucking service manager" in f.read() and "To show service installation GUI: nssm install" in f.read() threat = 'Win64/Trojan.NSSManager.Gen'
 
 print(threat)
