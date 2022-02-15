@@ -2,6 +2,7 @@ filename = input('Prosime, zadejte jmeno souboru: ')
 sha256 = input('Prosime, zadejte SHA256 souboru: ')
 threat = 'Zadna hrozba'
 sha256.replace(' ', '')
+print('Hledáme viry a malware...')
 
 if sha256 == '3fa13b22b716ade35153a7330dc1873a9f411445d4ed2a834e8fb011262ed2bc' threat = 'DOS/Virus.Cosenza.A'
 if sha256 == 'f9855faa9de74bad527e685c774a4657074ac0413397e63c5543b587e7504156' threat = 'DOS/Virus.Cruncher.A'
@@ -11,7 +12,6 @@ if sha256 == 'f89345b3f5e45b76e49c61ab5db44db384350e20230de897dd548f2fd9c752c0' 
 if sha256 == '9233e922427985ad5fb2826ca7833148b57ce00a316d1611e1429e94ae4d5c93' threat = 'DOS/Virus.Virdem.A'
 if sha256 == 'ff01fcc87a878d702261930565df55fbfd686f39345f362b830a530866002c06' threat = 'DOS/Virus.Wisconsin.A'
 if sha256 == 'b860c85038a5e4278a887812fbc26d1588dd14087e2c44667fdd21ea76b62644' threat = 'Linux/Virus.Sickabs.A'
-if sha256 == 'a8ccb7159dbf2f3d4703be46b805f8554e2e191cf4e7f43a419e33965b483b42' threat = 'Win32/Adware.MultiPlug.A'
 if sha256 == 'ba863c7cd5f95e2aa79ab9d99f138bf697f59b3bf7a0df697113d47bb7a106c8' threat = 'Win32/Adware.Toptools.A'
 if sha256 == 'f6c62cda8576e3662498bed18196e1fd038e26ed46c7da8bbeb4e68e49ec0a27' threat = 'Win32/Backdoor.BackConstruction.A'
 if sha256 == 'b9cb9b6547dd95b1e78ab335ff4768223b58478d261b3e8adc57541fa488955b' threat = 'Win32/Backdoor.Okrum.A'
@@ -35,11 +35,13 @@ if sha256 == '246333f2fac7a9a4c7b3b7d4b68b7c00effe9bf0f1019187270bafc9a2f86f7a' 
 if sha256 == '83ecb875f87150a88f4c3d496eb3cb5388cd8bafdff4879884ececdbd1896e1d' threat = 'Win32/Rogue.NavaShield.A'
 if sha256 == '08b6f3ec3171995a4c96a8ba316543ca299502a3a5d8eecd6e37e3cf01cb7ae3' threat = 'Win32/Rogue.NavaShield.B'
 if sha256 == 'd038ca188c724d148f878edfdeb39f35cc02d9c1e0ca3c5c1de5da9c79062c92' threat = 'Win32/Rogue.SystemSecurity.A'
+if sha256 == '9d3fe04d88c401178165f7fbdf307ac0fb690cc5fef8b70ee7f380307d4748f8' threat = 'Win32/Trojan.000.A'
 if sha256 == '569cf8b606e33cfc34c8bd97839b8b827758051ff696ebaddf26ea9fd953ce98' threat = 'Win32/Trojan.Agent.A'
 if sha256 == '662ed4a2153333a2789f3b5e5b5af9e8b1cf1c8a9656e73bb9ee3e28e9046172' threat = 'Win32/Trojan.Agent.B'
 if sha256 == '47f6d3a11ffd015413ffb96432ec1f980fba5dd084990dd61a00342c5f6da7f8' threat = 'Win32/Trojan.NoEscape.A'
-if sha256 == '9d3fe04d88c401178165f7fbdf307ac0fb690cc5fef8b70ee7f380307d4748f8' threat = 'Win32/Trojan.000.A'
+if sha256 == 'b0611cd3dadd441bc00145be8a08b480e60022a5b0da21533ffd313394efedbc' threat = 'Win32/Trojan.Staser.A'
 if sha256 == '50200a4b836cc4b8a7503bf28fba98ebc54bdd423660dc890a6669cc097a5729' threat = 'Win32/Virus.Blackbat.A'
+if sha256 == '05ca0bc0c76403d2dea6009cf246514ce830957b8cc2b9d49efc547808213c34' threat = 'Win32/Virus.Neshta.A'
 if sha256 == '59fe169797953f2046b283235fe80158ebf02ba586eabfea306402fba8473dae' threat = 'Win32/Worm.CodeRed.A'
 if sha256 == 'cbadaf9825a8338853498cd9b299c987444d26f6bf7de0e6964d77fcdff1514a' threat = 'Win32/Worm.CodeRed.B'
 if sha256 == '5b7228947b256f36bd98dde1622799cda8f7a7aa0f3196aba08200fe8439dfee' threat = 'Win32/Worm.Doomjuice.A'
@@ -52,16 +54,18 @@ if sha256 == '181f864212bddd3099d2cb7089a291a4d470387c498e615bb6220de83bfb6a37' 
 if sha256 == '6c65feef8c7fd68585e3b91cd4180211889d75c47776057d996717a7f0699d23' threat = 'Win32/Worm.LoveLetter.B'
 if sha256 == '88376cc51b37ab8c335f821c1129a0e8600dab9605e5d775933bcd7ceedfac8c' threat = 'Win32/Worm.Nimda.A'
 if sha256 == 'e6cfdb31aa9a6a08bc428b2775be26eef7599cad0bb21948d280d5a3e5ddf150' threat = 'Win32/Worm.Totilix.A'
+if sha256 == 'a8ccb7159dbf2f3d4703be46b805f8554e2e191cf4e7f43a419e33965b483b42' threat = 'Win64/Adware.MultiPlug.A'
+if sha256 == '4735b18c263cd1d29c96b64b26e7f4f54f9bf862286339a87f8d08db1fd1ca2e' threat = 'Win64/Adware.MultiPlug.B'
+if sha256 == 'fde9e3251cc1237aa3b2ad89acfb5691e8fee5a434989d9a9308ab41b774b672' threat = 'Win64/Adware.MultiPlug.C'
 if sha256 == '8e1260bbf43e54ef60672fc2efac525e961b5dee67146063aefcfda2d7161d89' threat = 'Win64/Trojan.Crackonosh.A'
 if sha256 == '3335ec57681b238846e0d19a3459dc739d11dfaf36722b7f19e609a96b97ad92' threat = 'Win64/Trojan.NSSManager.A'
-
-print(threat)
 
 f = open(filename)
 
 if "CONNECT %s:%i HTTP/1.0" in f.read() and "ws2_32" in f.read() and "thj@h" in f.read() and "cks=u" in f.read() and "advpack" in f.read() threat = 'Win32/Backdoor.PoisonIvy.Gen'
 if "EaseUSHelper" in f.read() and "WARNING" in f.read() and 'ARE YOU SURE YOU WANT TO EXECUTE THIS RANSOMWARE?' in f.read() threat = 'Win32/Ransom.NETCrypton.Gen'
 if "There's no Epic Games folder!!! Do you even Fortnite, bro?" in f.read() and "Trojan.Win32.Fonite" in f.read() and "by Valzentia" in f.read() and "Epic Games is a disease" in f.read() threat = 'Win32/Trojan.Fonite.Gen'
+if "Best regards 2 Tommy Salo." in f.read() and "Neshta 1.0 Made in Belarus." in f.read() and "Dziadulja Apanas" in f.read() threat = 'Win32/Virus.Neshta.Gen'
 if "AV Intelligent Updater" in f.read() and "Please select email address to send at your friend" in f.read() and 'Select email address with ' in f.read() threat = 'Win32/Worm.Totilix.Gen'
 if "NSSM: The non-sucking service manager" in f.read() and "To show service installation GUI: nssm install" in f.read() threat = 'Win64/Trojan.NSSManager.Gen'
 
