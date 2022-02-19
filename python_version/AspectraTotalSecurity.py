@@ -9,7 +9,7 @@ if sha256 == 'f9855faa9de74bad527e685c774a4657074ac0413397e63c5543b587e7504156' 
 if sha256 == '6dd6e06d6c7aea56b4d55c0207e7e825c33d5af67a546a0c2f37a767c79e54e1' threat = 'DOS/Virus.Fellow.A'
 if sha256 == 'adf6ec168a36bc1b2820cc72220fa2b4236c07435d140e667791f69f25e660b6' threat = 'DOS/Virus.Freddy.A'
 if sha256 == '54874e12ae06ef90e784b87adc6ae771240d09b527a9dc02ea8de527db3f6312' threat = 'DOS/Virus.Mummy.A'
-if sha256 == 'bd9aa78e769210aa68361e07f0a7580b026c005ac8798845fafd23d331865699' threat = 'DOS/Virus.Nygus'
+if sha256 == 'bd9aa78e769210aa68361e07f0a7580b026c005ac8798845fafd23d331865699' threat = 'DOS/Virus.Nygus.A'
 if sha256 == 'f89345b3f5e45b76e49c61ab5db44db384350e20230de897dd548f2fd9c752c0' threat = 'DOS/Virus.Holiday.A'
 if sha256 == '9233e922427985ad5fb2826ca7833148b57ce00a316d1611e1429e94ae4d5c93' threat = 'DOS/Virus.Virdem.A'
 if sha256 == 'ff01fcc87a878d702261930565df55fbfd686f39345f362b830a530866002c06' threat = 'DOS/Virus.Wisconsin.A'
@@ -32,7 +32,7 @@ if sha256 == 'd969116e7897b5a99cc28cfdc274191816e09e5d84d07da4cdbd3825552c3417' 
 if sha256 == '8da8fb1e26164d18e849cfcad5ca222da395a1ef43f4a528ae758375372d13ef' threat = 'Win32/Ransom.NETCrypton.A'
 if sha256 == 'df96eb9c4ef47f5c20662c037c32f11d777802e67df091c60d6fcd82ff1b818e' threat = 'Win32/Ransom.Phobos.A'
 if sha256 == '23d3f8aa6e5d072259dd8aeeb4fbe70ca6bbfdfbb4be3b7166b6c399d836bee2' threat = 'Win32/Ransom.Rijndael.A'
-if sha256 == 'c49eb3f83f94347d223338a13a2a57387ac689dc16d64f3d41a251b3a3325e5d' threat = 'Win32/Ransom.Spartacus.A
+if sha256 == 'c49eb3f83f94347d223338a13a2a57387ac689dc16d64f3d41a251b3a3325e5d' threat = 'Win32/Ransom.Spartacus.A'
 if sha256 == '8ad873e8543935a9cc12317f90676019801257de4b0845414a7df058e03d6d7f' threat = 'Win32/Ransom.WannaCash.A'
 if sha256 == '13c92506e1ec7986e4ead73470f5516bf1c01f25b46989551c67c22dba76bead' threat = 'Win32/Ransom.WannaCryptor.A'
 if sha256 == '246333f2fac7a9a4c7b3b7d4b68b7c00effe9bf0f1019187270bafc9a2f86f7a' threat = 'Win32/Rogue.GoldAntivirus.A'
@@ -64,7 +64,7 @@ if sha256 == 'fde9e3251cc1237aa3b2ad89acfb5691e8fee5a434989d9a9308ab41b774b672' 
 if sha256 == '8e1260bbf43e54ef60672fc2efac525e961b5dee67146063aefcfda2d7161d89' threat = 'Win64/Trojan.Crackonosh.A'
 if sha256 == '3335ec57681b238846e0d19a3459dc739d11dfaf36722b7f19e609a96b97ad92' threat = 'Win64/Trojan.NSSManager.A'
 
-  f = open(filename)
+f = open(filename)
 
 if "CONNECT %s:%i HTTP/1.0" in f.read() and "ws2_32" in f.read() and "thj@h" in f.read() and "cks=u" in f.read() and "advpack" in f.read() threat = 'Win32/Backdoor.PoisonIvy.Gen'
 if "EaseUSHelper" in f.read() and "WARNING" in f.read() and 'ARE YOU SURE YOU WANT TO EXECUTE THIS RANSOMWARE?' in f.read() threat = 'Win32/Ransom.NETCrypton.Gen'
