@@ -1,6 +1,6 @@
-filename = input('Prosime, zadejte jmeno souboru: ')
-sha256 = input('Prosime, zadejte SHA256 souboru: ')
-threat = 'Zadna hrozba'
+filename = input('Prosíme, zadejte jméno souboru: ')
+sha256 = input('Prosíme, zadejte SHA256 souboru: ')
+threat = 'Žádná hrozba'
 sha256.replace(' ', '')
 print('Hledáme viry a malware...')
 
@@ -32,6 +32,7 @@ if sha256 == '23d3f8aa6e5d072259dd8aeeb4fbe70ca6bbfdfbb4be3b7166b6c399d836bee2' 
 if sha256 == '8ad873e8543935a9cc12317f90676019801257de4b0845414a7df058e03d6d7f' threat = 'Win32/Ransom.WannaCash.A'
 if sha256 == '13c92506e1ec7986e4ead73470f5516bf1c01f25b46989551c67c22dba76bead' threat = 'Win32/Ransom.WannaCryptor.A'
 if sha256 == 'd793f37eb89310ddfc6d0337598c316db0eccda4d30e34143c768235594a169c' threat = 'Win32/RAT.AsyncRAT.A'
+if sha256 == '4717ee69d28306254b1affa7efc0a50c481c3930025e75366ce93c99505ded96' threat = 'Win32/RAT.AsyncRAT.B'
 if sha256 == '246333f2fac7a9a4c7b3b7d4b68b7c00effe9bf0f1019187270bafc9a2f86f7a' threat = 'Win32/Rogue.GoldAntivirus.A'
 if sha256 == '83ecb875f87150a88f4c3d496eb3cb5388cd8bafdff4879884ececdbd1896e1d' threat = 'Win32/Rogue.NavaShield.A'
 if sha256 == '08b6f3ec3171995a4c96a8ba316543ca299502a3a5d8eecd6e37e3cf01cb7ae3' threat = 'Win32/Rogue.NavaShield.B'
@@ -43,6 +44,7 @@ if sha256 == 'e438b2b103d363631f1339b6441dec1f86b50739cfa8e7476ad2e4e0061874c3' 
 if sha256 == '47f6d3a11ffd015413ffb96432ec1f980fba5dd084990dd61a00342c5f6da7f8' threat = 'Win32/Trojan.NoEscape.A'
 if sha256 == 'b0611cd3dadd441bc00145be8a08b480e60022a5b0da21533ffd313394efedbc' threat = 'Win32/Trojan.Staser.A'
 if sha256 == 'ebd7809cacae62bc94dfb8077868f53d53beb0614766213d48f4385ed09c73a6' threat = 'Win32/Trojan.Zephyr.A'
+if sha256 == '67250d5e5cb42df505b278e53ae346e7573ba60a06c3daac7ec05f853100e61c' threat = 'Win32/Trojan.Zephyr.B'
 if sha256 == '50200a4b836cc4b8a7503bf28fba98ebc54bdd423660dc890a6669cc097a5729' threat = 'Win32/Virus.Blackbat.A'
 if sha256 == '05ca0bc0c76403d2dea6009cf246514ce830957b8cc2b9d49efc547808213c34' threat = 'Win32/Virus.Neshta.A'
 if sha256 == '59fe169797953f2046b283235fe80158ebf02ba586eabfea306402fba8473dae' threat = 'Win32/Worm.CodeRed.A'
