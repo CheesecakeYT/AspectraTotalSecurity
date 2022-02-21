@@ -4,7 +4,7 @@ threat = 'Žádná hrozba'
 sha256.replace(' ', '')
 print('Hledáme viry a malware...')
 
-if sha256 == '3fa13b22b716ade35153a7330dc1873a9f411445d4ed2a834e8fb011262ed2bc' threat = 'DOS/Virus.Cosenza.A'
+if sha256 == '3fa13b22b716ade35153a7330dc1873a9f411445d4ed2a834e8fb011262ed2bc': threat = 'DOS/Virus.Cosenza.A'
 if sha256 == 'f9855faa9de74bad527e685c774a4657074ac0413397e63c5543b587e7504156' threat = 'DOS/Virus.Cruncher.A'
 if sha256 == '6dd6e06d6c7aea56b4d55c0207e7e825c33d5af67a546a0c2f37a767c79e54e1' threat = 'DOS/Virus.Fellow.A'
 if sha256 == 'adf6ec168a36bc1b2820cc72220fa2b4236c07435d140e667791f69f25e660b6' threat = 'DOS/Virus.Freddy.A'
