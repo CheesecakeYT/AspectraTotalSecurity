@@ -12,6 +12,7 @@ if sha256 == '88175d899be2458041895314e447b647811f2950ee30a6854f77a22b91a36df9':
 if sha256 == '54874e12ae06ef90e784b87adc6ae771240d09b527a9dc02ea8de527db3f6312': threat = 'DOS/Virus.Mummy.A'
 if sha256 == 'bd9aa78e769210aa68361e07f0a7580b026c005ac8798845fafd23d331865699': threat = 'DOS/Virus.Nygus.A'
 if sha256 == 'f89345b3f5e45b76e49c61ab5db44db384350e20230de897dd548f2fd9c752c0': threat = 'DOS/Virus.Holiday.A'
+if sha256 == '22acc9a31fd805921c943d0bb7d951565e835d5000cae2ff188ae9a802fdb97b': threat = 'DOS/Virus.Selectron.A'
 if sha256 == '9233e922427985ad5fb2826ca7833148b57ce00a316d1611e1429e94ae4d5c93': threat = 'DOS/Virus.Virdem.A'
 if sha256 == 'ff01fcc87a878d702261930565df55fbfd686f39345f362b830a530866002c06': threat = 'DOS/Virus.Wisconsin.A'
 if sha256 == 'b860c85038a5e4278a887812fbc26d1588dd14087e2c44667fdd21ea76b62644': threat = 'Linux/Virus.Sickabs.A'
