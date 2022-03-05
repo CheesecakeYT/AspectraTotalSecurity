@@ -23,6 +23,7 @@ if sha256 == 'fecaa7ac86c4301544c6004bc2c3b6a73f88fe6a625c3c8bee43187c988e4b47':
 if sha256 == 'dc176b80aadebdfa96a8e55867fb0f3778c80ec94a99ff9751b49bce441c51ca': threat = 'Win32/Adware.Linkury.A'
 if sha256 == '11bebe94ad92e094f42052ed9b52f26c28b76660ff2c6fc5292f81a525d4e768': threat = 'Win32/Adware.Linkury.B'
 if sha256 == '552a5eeb89f450c448e7cede3233bb04d69e0b106d356f0257634581e9f0aa71': threat = 'Win32/Adware.MegaSearch.A'
+if sha256 == '1074cbc810766e42cd8b875c7492432479406e7d1c6ba8d4b7a01b268544abc1': threat = 'Win32/Adware.Techsnab.A'
 if sha256 == 'ba863c7cd5f95e2aa79ab9d99f138bf697f59b3bf7a0df697113d47bb7a106c8': threat = 'Win32/Adware.Toptools.A'
 if sha256 == 'f6c62cda8576e3662498bed18196e1fd038e26ed46c7da8bbeb4e68e49ec0a27': threat = 'Win32/Backdoor.BackConstruction.A'
 if sha256 == 'b9cb9b6547dd95b1e78ab335ff4768223b58478d261b3e8adc57541fa488955b': threat = 'Win32/Backdoor.Okrum.A'
@@ -40,6 +41,7 @@ if sha256 == 'e049d8f69ddee0c2d360c27b98fa9e61b7202bb0d3884dd3ca63f8aa288422dc':
 if sha256 == '55f1ce7d7b3cf941ea355a07623b02a6ec2007d1f5069717a449dd31405bb86b': threat = 'Win32/Ransom.Keslan.A'
 if sha256 == 'd969116e7897b5a99cc28cfdc274191816e09e5d84d07da4cdbd3825552c3417': threat = 'Win32/Ransom.Keslan.B'
 if sha256 == '8da8fb1e26164d18e849cfcad5ca222da395a1ef43f4a528ae758375372d13ef': threat = 'Win32/Ransom.NETCrypton.A'
+if sha256 == '26b4699a7b9eeb16e76305d843d4ab05e94d43f3201436927e13b3ebafa90739': threat = 'Win32/Ransom.Petya.A'
 if sha256 == 'df96eb9c4ef47f5c20662c037c32f11d777802e67df091c60d6fcd82ff1b818e': threat = 'Win32/Ransom.Phobos.A'
 if sha256 == '23d3f8aa6e5d072259dd8aeeb4fbe70ca6bbfdfbb4be3b7166b6c399d836bee2': threat = 'Win32/Ransom.Rijndael.A'
 if sha256 == 'c49eb3f83f94347d223338a13a2a57387ac689dc16d64f3d41a251b3a3325e5d': threat = 'Win32/Ransom.Spartacus.A'
@@ -57,8 +59,10 @@ if sha256 == '569cf8b606e33cfc34c8bd97839b8b827758051ff696ebaddf26ea9fd953ce98':
 if sha256 == '662ed4a2153333a2789f3b5e5b5af9e8b1cf1c8a9656e73bb9ee3e28e9046172': threat = 'Win32/Trojan.Agent.B'
 if sha256 == 'e438b2b103d363631f1339b6441dec1f86b50739cfa8e7476ad2e4e0061874c3': threat = 'Win32/Trojan.Agent.C'
 if sha256 == '422c932d36addc9f706109bd99544f43014518f83cc489b3d09e888f305cb8b6': threat = 'Win32/Trojan.Agent.D'
+if sha256 == 'f070893ea7ba643dabb4900f1971920830d0afabac44050e6bd46c30e26b47f8': threat = 'Win32/Trojan.Agent.E'
 if sha256 == '47f6d3a11ffd015413ffb96432ec1f980fba5dd084990dd61a00342c5f6da7f8': threat = 'Win32/Trojan.NoEscape.A'
 if sha256 == 'b0611cd3dadd441bc00145be8a08b480e60022a5b0da21533ffd313394efedbc': threat = 'Win32/Trojan.Staser.A'
+if sha256 == 'b090e99e4b74ca679895a724548c1a256fbb613524a9addec81eff17008c76c7': threat = 'Win32/Trojan.Tasker.A'
 if sha256 == 'ebd7809cacae62bc94dfb8077868f53d53beb0614766213d48f4385ed09c73a6': threat = 'Win32/Trojan.Zephyr.A'
 if sha256 == '67250d5e5cb42df505b278e53ae346e7573ba60a06c3daac7ec05f853100e61c': threat = 'Win32/Trojan.Zephyr.B'
 if sha256 == '50200a4b836cc4b8a7503bf28fba98ebc54bdd423660dc890a6669cc097a5729': threat = 'Win32/Virus.Blackbat.A'
@@ -83,6 +87,9 @@ if sha256 == '4735b18c263cd1d29c96b64b26e7f4f54f9bf862286339a87f8d08db1fd1ca2e':
 if sha256 == 'fde9e3251cc1237aa3b2ad89acfb5691e8fee5a434989d9a9308ab41b774b672': threat = 'Win64/Adware.MultiPlug.C'
 if sha256 == 'a758ad4fdc8949ea005258075457a972eb0672d69d98d688117b85221fca096a': threat = 'Win64/Adware.MultiPlug.D'
 if sha256 == 'df26a06b2fffc5a491e3bd39bfac6a97bbc4f90ab4e1f85e32f1e1602094f850': threat = 'Win64/Adware.MultiPlug.E'
+if sha256 == 'bd5125467c5803679bd8139889a091731b7e10f097d3b4ced7fb8b56a968545b': threat = 'Win64/Adware.MultiPlug.F'
+if sha256 == 'a701ceb01833883ba36c205295d176f16fb378051ae6a18677c80327c5188331': threat = 'Win64/CoinMiner.Agent.A'
+if sha256 == '3f8f2face06ccf57353547c8865709bc7a6cf9dbdd2544ffdfd6fe7b7a0e5f96': threat = 'Win64/CoinMiner.Agent.B'
 if sha256 == '8e1260bbf43e54ef60672fc2efac525e961b5dee67146063aefcfda2d7161d89': threat = 'Win64/Trojan.Crackonosh.A'
 if sha256 == '3335ec57681b238846e0d19a3459dc739d11dfaf36722b7f19e609a96b97ad92': threat = 'Win64/Trojan.NSSManager.A'
 
@@ -99,4 +106,23 @@ if "Best regards 2 Tommy Salo." in f.read() and "Neshta 1.0 Made in Belarus." in
 if "AV Intelligent Updater" in f.read() and "Please select email address to send at your friend" in f.read() and 'Select email address with ' in f.read(): threat = 'Win32/Worm.Totilix.Gen'
 if "NSSM: The non-sucking service manager" in f.read() and "To show service installation GUI: nssm install" in f.read(): threat = 'Win64/Trojan.NSSManager.Gen'
 
-print(threat)
+if threat == 'Žádná hrozba':
+  print('Test byl dokončen.')
+  print('Nebyla nalezena žádná hrozba.')
+  
+else
+
+  print('Test byl dokončen.')
+  print('Byly nalezeny hrozby.')
+  print()
+  print('Hrozba: ' + threat)
+  print()
+  print()
+  print('Už jste soubor otevřeli? Zkuste použít Solver.')
+  print()
+  choice = input('Zadejte svou volbu: ')
+  
+  if choice.lower() == 'solver':    
+    if 'Win32/Ransom.Petya' in threat:
+      print('Dešifrovací klíč: iBD5ohFBbUb3Aa1f')
+  
