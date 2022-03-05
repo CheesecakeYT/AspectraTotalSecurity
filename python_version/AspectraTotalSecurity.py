@@ -29,9 +29,9 @@ if filename:
           '1bfcdbfd55a3868662972436e062833ea63c852a48fe3b2cc615e32f5a387028': 'Win32/Adware.Adposhel.A',
           '0a104928dda5b6e4a04c050d33bf75fec29fe7b843d47f7f89c527cce5e1d456': 'Win32/Adware.Adposhel.B',
           'fecaa7ac86c4301544c6004bc2c3b6a73f88fe6a625c3c8bee43187c988e4b47': 'Win32/Adware.Adposhel.C',
+          'dc176b80aadebdfa96a8e55867fb0f3778c80ec94a99ff9751b49bce441c51ca': 'Win32/Adware.Linkury.A',
       }[threat]
 
-  if sha256 == 'dc176b80aadebdfa96a8e55867fb0f3778c80ec94a99ff9751b49bce441c51ca': threat = 'Win32/Adware.Linkury.A'
   if sha256 == '11bebe94ad92e094f42052ed9b52f26c28b76660ff2c6fc5292f81a525d4e768': threat = 'Win32/Adware.Linkury.B'
   if sha256 == '552a5eeb89f450c448e7cede3233bb04d69e0b106d356f0257634581e9f0aa71': threat = 'Win32/Adware.MegaSearch.A'
   if sha256 == '1074cbc810766e42cd8b875c7492432479406e7d1c6ba8d4b7a01b268544abc1': threat = 'Win32/Adware.Techsnab.A'
