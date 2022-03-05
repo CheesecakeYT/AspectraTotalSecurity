@@ -132,7 +132,7 @@ if filename:
     print('Test byl dokončen.')
     print('Nebyla nalezena žádná hrozba.')
 
-  else
+  else:
 
     print('Test byl dokončen.')
     print('Byly nalezeny hrozby.')
@@ -143,5 +143,5 @@ if filename:
     if 'Win32/Ransom.Petya' in threat:
       print('Solver dokončil práci.')
       print('Dešifrovací klíč: iBD5ohFBbUb3Aa1f')
-    else
+    else:
       try os.remove(filename)
