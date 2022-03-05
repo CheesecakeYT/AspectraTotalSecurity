@@ -144,4 +144,4 @@ if filename:
       print('Solver dokončil práci.')
       print('Dešifrovací klíč: iBD5ohFBbUb3Aa1f')
     else:
-      try os.remove(filename)
+      try: os.remove(filename)
