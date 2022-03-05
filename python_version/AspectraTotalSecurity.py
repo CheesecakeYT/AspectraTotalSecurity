@@ -119,7 +119,6 @@ if filename:
   if "/[Aa]ccept\-[Ee]ncoding: [a-z\-]{1,16},([a-z\-\s]{1,16},|)*[\s]{1,20},/" in f.read(): threat = 'Win32/Exploit.CVE-2021-31166.Gen'
   if "Online KMS" in f.read() and "Thanks to pawel97 for the patch ODT" in f.read() and "Thanks to DiamondMonday" in f.read(): threat = 'Win32/Hacktool.AutoKMS.Gen'
   if "EaseUSHelper" in f.read() and "WARNING" in f.read() and 'ARE YOU SURE YOU WANT TO EXECUTE THIS RANSOMWARE?' in f.read(): threat = 'Win32/Ransom.NETCrypton.Gen'
-  if "Sad Computer" in f.read() and "Are You Sure You want to install Antivirus software?" in f.read(): threat = 'Win32/Ransom.SadComputer.Gen'
   if 'https://paste.ee/r/gk49i/0' in f.read() and "UserClient.DownloadFileTaskAsync" in f.read(): threat = 'Win32/RAT.AsyncRAT.Gen'
   if "Kaspersky Tweaker for KFA2018" in f.read() and "2020202020202020202020202020202020202020302E2082EBE5AE3F0D0A" in f.read(): threat = 'Win32/Trojan.Agent.C'
   if "There's no Epic Games folder!!! Do you even Fortnite, bro?" in f.read() and "Trojan.Win32.Fonite" in f.read() and "by Valzentia" in f.read() and "Epic Games is a disease" in f.read(): threat = 'Win32/Trojan.Fonite.Gen'
