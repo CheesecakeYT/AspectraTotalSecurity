@@ -1,5 +1,6 @@
 import tkinter as tk
 import hashlib
+import os
 
 filename = tk.filedialog.askopenfilename(title="Prosíme, vyberte soubor pro kontrolu:")
 if filename:
