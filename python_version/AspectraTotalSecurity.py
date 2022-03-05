@@ -111,7 +111,7 @@ if filename:
     contents = f.read()
   def f(threat):
     return {
-      'Sad Computer', 'Are You Sure You want to install Antivirus software?': 'Win32/Ransom.SadComputer.Gen'
+      'Win32/Ransom.SadComputer.Gen': ['Sad Computer', 'Are You Sure You want to install Antivirus software?'],
     }[threat]
 
   if "CONNECT %s:%i HTTP/1.0" in f.read() and "ws2_32" in f.read() and "thj@h" in f.read() and "cks=u" in f.read() and "advpack" in f.read(): threat = 'Win32/Backdoor.PoisonIvy.Gen'
