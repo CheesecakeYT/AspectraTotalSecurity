@@ -1,7 +1,9 @@
 import tkinter as tk
+import hashlib
 
 filename = tk.filedialog.askopenfilename(title="Prosíme, vyberte soubor pro kontrolu:")
 if filename:
+  sha256 = hashlib.sha256(filename)
   threat = 'Žádná hrozba'
   sha256.replace(' ', '')
   tk.messagebox.showinfo('Aspectra Total Security', 'Hledáme viry a malware.')
@@ -11,23 +13,23 @@ if filename:
           '79e602a062d05fbb1409afc16e6d41ac0645576b2b5c1899dc93e6852c30a71f': 'Android/Ransom.DoubleLocker.A',
           '929cf1806157df25d78c6fae4461c6d67bd6dd129e276995e7bf7ffe7aa88786': 'Android/Ransom.DoubleLocker.B',
           '3fa13b22b716ade35153a7330dc1873a9f411445d4ed2a834e8fb011262ed2bc': 'DOS/Virus.Cosenza.A',
+          'f9855faa9de74bad527e685c774a4657074ac0413397e63c5543b587e7504156': 'DOS/Virus.Cruncher.A',
+          '6dd6e06d6c7aea56b4d55c0207e7e825c33d5af67a546a0c2f37a767c79e54e1': 'DOS/Virus.Fellow.A',
+          'adf6ec168a36bc1b2820cc72220fa2b4236c07435d140e667791f69f25e660b6': 'DOS/Virus.Freddy.A',
+          '88175d899be2458041895314e447b647811f2950ee30a6854f77a22b91a36df9': 'DOS/Virus.Girls.A',
           'f89345b3f5e45b76e49c61ab5db44db384350e20230de897dd548f2fd9c752c0': 'DOS/Virus.Holiday.A',
-      }[x]
+          '54874e12ae06ef90e784b87adc6ae771240d09b527a9dc02ea8de527db3f6312': 'DOS/Virus.Mummy.A',
+          'bd9aa78e769210aa68361e07f0a7580b026c005ac8798845fafd23d331865699': 'DOS/Virus.Nygus.A',
+          '22acc9a31fd805921c943d0bb7d951565e835d5000cae2ff188ae9a802fdb97b': 'DOS/Virus.Selectron.A',
+          '9233e922427985ad5fb2826ca7833148b57ce00a316d1611e1429e94ae4d5c93': 'DOS/Virus.Virdem.A',
+          'ff01fcc87a878d702261930565df55fbfd686f39345f362b830a530866002c06': 'DOS/Virus.Wisconsin.A',
+          'b860c85038a5e4278a887812fbc26d1588dd14087e2c44667fdd21ea76b62644': 'Linux/Virus.Sickabs.A',
+          'f7f1e54f77ef454b557715576bf220e14cfb678a4de4a5fd29cf50e42c57ee80': 'Win32/Adware.Adload.A',
+          '1bfcdbfd55a3868662972436e062833ea63c852a48fe3b2cc615e32f5a387028': 'Win32/Adware.Adposhel.A',
+          '0a104928dda5b6e4a04c050d33bf75fec29fe7b843d47f7f89c527cce5e1d456': 'Win32/Adware.Adposhel.B',
+          'fecaa7ac86c4301544c6004bc2c3b6a73f88fe6a625c3c8bee43187c988e4b47': 'Win32/Adware.Adposhel.C',
+      }[threat]
 
-  if sha256 == 'f9855faa9de74bad527e685c774a4657074ac0413397e63c5543b587e7504156': threat = 'DOS/Virus.Cruncher.A'
-  if sha256 == '6dd6e06d6c7aea56b4d55c0207e7e825c33d5af67a546a0c2f37a767c79e54e1': threat = 'DOS/Virus.Fellow.A'
-  if sha256 == 'adf6ec168a36bc1b2820cc72220fa2b4236c07435d140e667791f69f25e660b6': threat = 'DOS/Virus.Freddy.A'
-  if sha256 == '88175d899be2458041895314e447b647811f2950ee30a6854f77a22b91a36df9': threat = 'DOS/Virus.Girls.A'
-  if sha256 == '54874e12ae06ef90e784b87adc6ae771240d09b527a9dc02ea8de527db3f6312': threat = 'DOS/Virus.Mummy.A'
-  if sha256 == 'bd9aa78e769210aa68361e07f0a7580b026c005ac8798845fafd23d331865699': threat = 'DOS/Virus.Nygus.A'
-  if sha256 == '22acc9a31fd805921c943d0bb7d951565e835d5000cae2ff188ae9a802fdb97b': threat = 'DOS/Virus.Selectron.A'
-  if sha256 == '9233e922427985ad5fb2826ca7833148b57ce00a316d1611e1429e94ae4d5c93': threat = 'DOS/Virus.Virdem.A'
-  if sha256 == 'ff01fcc87a878d702261930565df55fbfd686f39345f362b830a530866002c06': threat = 'DOS/Virus.Wisconsin.A'
-  if sha256 == 'b860c85038a5e4278a887812fbc26d1588dd14087e2c44667fdd21ea76b62644': threat = 'Linux/Virus.Sickabs.A'
-  if sha256 == 'f7f1e54f77ef454b557715576bf220e14cfb678a4de4a5fd29cf50e42c57ee80': threat = 'Win32/Adware.Adload.A'
-  if sha256 == '1bfcdbfd55a3868662972436e062833ea63c852a48fe3b2cc615e32f5a387028': threat = 'Win32/Adware.Adposhel.A'
-  if sha256 == '0a104928dda5b6e4a04c050d33bf75fec29fe7b843d47f7f89c527cce5e1d456': threat = 'Win32/Adware.Adposhel.B'
-  if sha256 == 'fecaa7ac86c4301544c6004bc2c3b6a73f88fe6a625c3c8bee43187c988e4b47': threat = 'Win32/Adware.Adposhel.C'
   if sha256 == 'dc176b80aadebdfa96a8e55867fb0f3778c80ec94a99ff9751b49bce441c51ca': threat = 'Win32/Adware.Linkury.A'
   if sha256 == '11bebe94ad92e094f42052ed9b52f26c28b76660ff2c6fc5292f81a525d4e768': threat = 'Win32/Adware.Linkury.B'
   if sha256 == '552a5eeb89f450c448e7cede3233bb04d69e0b106d356f0257634581e9f0aa71': threat = 'Win32/Adware.MegaSearch.A'
@@ -105,7 +107,12 @@ if filename:
   if sha256 == '8e1260bbf43e54ef60672fc2efac525e961b5dee67146063aefcfda2d7161d89': threat = 'Win64/Trojan.Crackonosh.A'
   if sha256 == '3335ec57681b238846e0d19a3459dc739d11dfaf36722b7f19e609a96b97ad92': threat = 'Win64/Trojan.NSSManager.A'
 
-  f = open(filename)
+  with open(filename) as f:
+    contents = f.read()
+  def f(threat):
+    return {
+      'Sad Computer', 'Are You Sure You want to install Antivirus software?': 'Win32/Ransom.SadComputer.Gen'
+    }[threat]
 
   if "CONNECT %s:%i HTTP/1.0" in f.read() and "ws2_32" in f.read() and "thj@h" in f.read() and "cks=u" in f.read() and "advpack" in f.read(): threat = 'Win32/Backdoor.PoisonIvy.Gen'
   if "/[Aa]ccept\-[Ee]ncoding: [a-z\-]{1,16},([a-z\-\s]{1,16},|)*[\s]{1,20},/" in f.read(): threat = 'Win32/Exploit.CVE-2021-31166.Gen'
