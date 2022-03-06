@@ -149,7 +149,7 @@ def FileScan():
       else:
         os.remove(filename)
 
-FileChooseButton = tk.Button(main, text='Vybrat soubor')
+FileChooseButton = tk.Button(main, text='Vybrat soubor', command=FileScan)
 FileChooseButton.pack()
 
 main.mainloop()
