@@ -3,6 +3,7 @@ import hashlib
 import os
 
 main = tk.Tk()
+main.iconbitmap(r'img/icon.png')
 
 def FileScan():
   filename = tk.filedialog.askopenfilename(title="Prosíme, vyberte soubor pro kontrolu:")
