@@ -35,6 +35,8 @@ def FileScan():
             'fecaa7ac86c4301544c6004bc2c3b6a73f88fe6a625c3c8bee43187c988e4b47': 'Win32/Adware.Adposhel.C',
             'dc176b80aadebdfa96a8e55867fb0f3778c80ec94a99ff9751b49bce441c51ca': 'Win32/Adware.Linkury.A',
             '11bebe94ad92e094f42052ed9b52f26c28b76660ff2c6fc5292f81a525d4e768': 'Win32/Adware.Linkury.B',
+            '4eb39d47ef742996c02a886d56b97aedad904d85cd2ebd57000f6cbbfabe0ea0': 'Win32/Trojan.Agent.F',
+            'a4b91a89b8d2bff27ed1e13e334109be8b207d48a6284f529391c5391d96f141': 'Win32/Trojan.Agent.G',
         }[threat]
 
     if sha256 == '552a5eeb89f450c448e7cede3233bb04d69e0b106d356f0257634581e9f0aa71': threat = 'Win32/Adware.MegaSearch.A'
