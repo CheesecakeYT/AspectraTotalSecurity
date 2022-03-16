@@ -35,6 +35,12 @@ def FileScan():
             'fecaa7ac86c4301544c6004bc2c3b6a73f88fe6a625c3c8bee43187c988e4b47': 'Win32/Adware.Adposhel.C',
             'dc176b80aadebdfa96a8e55867fb0f3778c80ec94a99ff9751b49bce441c51ca': 'Win32/Adware.Linkury.A',
             '11bebe94ad92e094f42052ed9b52f26c28b76660ff2c6fc5292f81a525d4e768': 'Win32/Adware.Linkury.B',
+            '107da216ad99b7c0171745fe7f826e51b27b1812d435b55c3ddb801e23137d8f': 'Win32/Ransom.RURansom.A',
+            '979f9d1e019d9172af73428a1b3cbdff8aec8fdbe0f67cba48971a36f5001da9': 'Win32/Ransom.RURansom.B',
+            '8f2ea18ed82085574888a03547a020b7009e05ae0ecbf4e9e0b8fe8502059aae': 'Win32/Ransom.RURansom.C',
+            '696b6b9f43e53387f7cef14c5da9b6c02b6bf4095849885d36479f8996e7e473': 'Win32/Ransom.RURansom.D',
+            '610ec163e7b34abd5587616db8dac7e34b1aef68d0260510854d6b3912fb0008': 'Win32/Ransom.RURansom.E',
+            '1f36898228197ee30c7b0ec0e48e804caa6edec33e3a91eeaf7aa2c5bbb9c6e0': 'Win32/Ransom.RURansom.F',
             '4eb39d47ef742996c02a886d56b97aedad904d85cd2ebd57000f6cbbfabe0ea0': 'Win32/Trojan.Agent.F',
             'a4b91a89b8d2bff27ed1e13e334109be8b207d48a6284f529391c5391d96f141': 'Win32/Trojan.Agent.G',
         }[threat]
@@ -118,6 +124,7 @@ def FileScan():
       contents = f.read()
     def f(threat):
       return {
+        'Win32/Ransom.RURansom.Gen': ['ОШИБКА!', 'Программу могут запускать только российские пользователи'],
         'Win32/Ransom.SadComputer.Gen': ['Sad Computer', 'Are You Sure You want to install Antivirus software?'],
       }[threat]
 
