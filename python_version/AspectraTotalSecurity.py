@@ -35,6 +35,10 @@ def FileScan():
             'fecaa7ac86c4301544c6004bc2c3b6a73f88fe6a625c3c8bee43187c988e4b47': 'Win32/Adware.Adposhel.C',
             'dc176b80aadebdfa96a8e55867fb0f3778c80ec94a99ff9751b49bce441c51ca': 'Win32/Adware.Linkury.A',
             '11bebe94ad92e094f42052ed9b52f26c28b76660ff2c6fc5292f81a525d4e768': 'Win32/Adware.Linkury.B',
+            '2c940a35025dd3847f7c954a282f65e9c2312d2ada28686f9d1dc73d1c500224': 'Win32/Ransom.Pandora.A',
+            '5b56c5d86347e164c6e571c86dbf5b1535eae6b979fede6ed66b01e79ea33b7b': 'Win32/Ransom.Pandora.B',
+            'f87be226e26e873275bde549539f70210ffe5e3a129448ae807a319cbdcf7789': 'Win32/Ransom.Rook.A',
+            'ebfdee6e5fe2aa5699280248a5e7b714ca18e5bfd284cac0ba4fb88ccbcec5b6': 'Win32/Ransom.Rook.B',
             '107da216ad99b7c0171745fe7f826e51b27b1812d435b55c3ddb801e23137d8f': 'Win32/Ransom.RURansom.A',
             '979f9d1e019d9172af73428a1b3cbdff8aec8fdbe0f67cba48971a36f5001da9': 'Win32/Ransom.RURansom.B',
             '8f2ea18ed82085574888a03547a020b7009e05ae0ecbf4e9e0b8fe8502059aae': 'Win32/Ransom.RURansom.C',
@@ -43,6 +47,8 @@ def FileScan():
             '1f36898228197ee30c7b0ec0e48e804caa6edec33e3a91eeaf7aa2c5bbb9c6e0': 'Win32/Ransom.RURansom.F',
             '4eb39d47ef742996c02a886d56b97aedad904d85cd2ebd57000f6cbbfabe0ea0': 'Win32/Trojan.Agent.F',
             'a4b91a89b8d2bff27ed1e13e334109be8b207d48a6284f529391c5391d96f141': 'Win32/Trojan.Agent.G',
+            '39b3c82b1e7e5626e380a53df4ccb52f3002749447cfab362b8ec217189a0fd5': 'Win32/Trojan.Hoogbot.A',
+            '449eef141fc451a95ca49147c99a31dc96cf448ca1f89c5becabf926a7420db8': 'Win32/Trojan.Hoogbot.B',
         }[threat]
 
     if sha256 == '552a5eeb89f450c448e7cede3233bb04d69e0b106d356f0257634581e9f0aa71': threat = 'Win32/Adware.MegaSearch.A'
