@@ -50,6 +50,7 @@ def FileScan():
             'a4b91a89b8d2bff27ed1e13e334109be8b207d48a6284f529391c5391d96f141': 'Win32/Trojan.Agent.G',
             '39b3c82b1e7e5626e380a53df4ccb52f3002749447cfab362b8ec217189a0fd5': 'Win32/Trojan.Hoogbot.A',
             '449eef141fc451a95ca49147c99a31dc96cf448ca1f89c5becabf926a7420db8': 'Win32/Trojan.Hoogbot.B',
+            'f4b9e42bb24d66ab458794509d4c0129b86ab1b4f42497607a91ef466f5feab8': 'Win32/Trojan.Quasar.A',
         }[threat]
 
     if sha256 == '552a5eeb89f450c448e7cede3233bb04d69e0b106d356f0257634581e9f0aa71': threat = 'Win32/Adware.MegaSearch.A'
@@ -133,6 +134,7 @@ def FileScan():
       return {
         'Win32/Ransom.RURansom.Gen': ['ОШИБКА!', 'Программу могут запускать только российские пользователи'],
         'Win32/Ransom.SadComputer.Gen': ['Sad Computer', 'Are You Sure You want to install Antivirus software?'],
+        'Win32/Trojan.Quasar.Gen': ['Quasar Client St', 'Client.exe', '5.249.164.219'],
       }[threat]
 
     if "CONNECT %s:%i HTTP/1.0" in f.read() and "ws2_32" in f.read() and "thj@h" in f.read() and "cks=u" in f.read() and "advpack" in f.read(): threat = 'Win32/Backdoor.PoisonIvy.Gen'
