@@ -28,6 +28,7 @@ def FileScan():
             '22acc9a31fd805921c943d0bb7d951565e835d5000cae2ff188ae9a802fdb97b': 'DOS/Virus.Selectron.A',
             '9233e922427985ad5fb2826ca7833148b57ce00a316d1611e1429e94ae4d5c93': 'DOS/Virus.Virdem.A',
             'ff01fcc87a878d702261930565df55fbfd686f39345f362b830a530866002c06': 'DOS/Virus.Wisconsin.A',
+            '7d587a5f6f36a74dcfbcbaecb2b0547fdf1ecdb034341f4cc7ae489f5b57a11d': 'Linux/Trojan.SteelCorgi.A',
             'b860c85038a5e4278a887812fbc26d1588dd14087e2c44667fdd21ea76b62644': 'Linux/Virus.Sickabs.A',
             'f7f1e54f77ef454b557715576bf220e14cfb678a4de4a5fd29cf50e42c57ee80': 'Win32/Adware.Adload.A',
             '1bfcdbfd55a3868662972436e062833ea63c852a48fe3b2cc615e32f5a387028': 'Win32/Adware.Adposhel.A',
