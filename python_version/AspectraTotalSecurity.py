@@ -63,6 +63,7 @@ def FileScan():
             '7264fc1e81ff854b769f8e19ced247fb95210a58ddd5edce4a6275ddc38e5298': 'Win32/Trojan.Qakbot.E',
             '5a6157eefc8d0b1089a5bfdee351379b27baff4c40b432fd22e0cbe1f6102fab': 'Win32/Trojan.Qakbot.F',
             'f4b9e42bb24d66ab458794509d4c0129b86ab1b4f42497607a91ef466f5feab8': 'Win32/Trojan.Quasar.A',
+            'ec9615d21e2c0463bc5d2846b41d77953df8c6ee01d43e0a25612498bb91695c': 'Win32/Trojan.Temr.A',
             'dcbbae5a1c61dbbbb7dcd6dc5dd1eb1169f5329958d38b58c3fd9384081c9b78': 'Win32/Trojan.WhisperGate.A',
             '34ca75a8c190f20b8a7596afeb255f2228cb2467bd210b2637965b61ac7ea907': 'Win32/Trojan.WhisperGate.B',
             '9ef7dbd3da51332a78eff19146d21c82957821e464e8133e9594a07d716d892d': 'Win32/Trojan.WhisperGate.C',
