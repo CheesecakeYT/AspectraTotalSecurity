@@ -16,7 +16,7 @@ def FileScan():
     def f(threat):
         return {
             '79e602a062d05fbb1409afc16e6d41ac0645576b2b5c1899dc93e6852c30a71f': 'Android/Ransom.DoubleLocker.A',
-            '929cf1806157df25d78c6fae4461c6d67bd6dd129e276995e7bf7ffe7aa88786': 'Android/Ransom.DoubleLocker.B',
+            '929cf1806157df25d78c6fae4461c6d67bd6dd129e276995e7bf7ffe7aa88786': 'Android/Ransom.DoubleLocker.B',          
             '3fa13b22b716ade35153a7330dc1873a9f411445d4ed2a834e8fb011262ed2bc': 'DOS/Virus.Cosenza.A',
             'f9855faa9de74bad527e685c774a4657074ac0413397e63c5543b587e7504156': 'DOS/Virus.Cruncher.A',
             '6dd6e06d6c7aea56b4d55c0207e7e825c33d5af67a546a0c2f37a767c79e54e1': 'DOS/Virus.Fellow.A',
@@ -40,6 +40,10 @@ def FileScan():
             'fecaa7ac86c4301544c6004bc2c3b6a73f88fe6a625c3c8bee43187c988e4b47': 'Win32/Adware.Adposhel.C',
             'dc176b80aadebdfa96a8e55867fb0f3778c80ec94a99ff9751b49bce441c51ca': 'Win32/Adware.Linkury.A',
             '11bebe94ad92e094f42052ed9b52f26c28b76660ff2c6fc5292f81a525d4e768': 'Win32/Adware.Linkury.B',
+            'd897f07ae6f42de8f35e2b05f5ef5733d7ec599d5e786d3225e66ca605a48f53': 'Win32/DoS.FiberLake.A',
+            '30b3cbe8817ed75d8221059e4be35d5624bd6b5dc921d4991a7adc4c3eb5de4a': 'Win32/DoS.FiberLake.B',
+            '3b2e708eaa4744c76a633391cf2c983f4a098b46436525619e5ea44e105355fe': 'Win32/DoS.FiberLake.C',
+            '8dd8b9bd94de1e72f0c400c5f32dcefc114cc0a5bf14b74ba6edc19fd4aeb2a5': 'Win32/DoS.FiberLake.D',
             '2c940a35025dd3847f7c954a282f65e9c2312d2ada28686f9d1dc73d1c500224': 'Win32/Ransom.Pandora.A',
             '5b56c5d86347e164c6e571c86dbf5b1535eae6b979fede6ed66b01e79ea33b7b': 'Win32/Ransom.Pandora.B',
             '4dc13bb83a16d4ff9865a51b3e4d24112327c526c1392e14d56f20d6f4eaf382': 'Win32/Ransom.PartyTicket.A',
