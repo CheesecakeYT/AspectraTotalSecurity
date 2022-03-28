@@ -55,6 +55,9 @@ def FileScan():
             '696b6b9f43e53387f7cef14c5da9b6c02b6bf4095849885d36479f8996e7e473': 'Win32/Ransom.RURansom.D',
             '610ec163e7b34abd5587616db8dac7e34b1aef68d0260510854d6b3912fb0008': 'Win32/Ransom.RURansom.E',
             '1f36898228197ee30c7b0ec0e48e804caa6edec33e3a91eeaf7aa2c5bbb9c6e0': 'Win32/Ransom.RURansom.F',
+            '6516d944f93186e7d422e7b93a476d4b04db0ed279ba93c4854d42387347d012': 'Win32/Scam.Emotet.A',
+            'feec12c64c8bf47ae20dc197ac1c5f0c087c89e9a72a054ba82a20bf6266b447': 'Win32/Scam.Emotet.B',
+            'e5a1123894f01197d793d1fe6fa0ecc2bf6167a26ec56bab8c9db70a775ec6bc': 'Win32/Scam.Emotet.C',
             '4eb39d47ef742996c02a886d56b97aedad904d85cd2ebd57000f6cbbfabe0ea0': 'Win32/Trojan.Agent.F',
             'a4b91a89b8d2bff27ed1e13e334109be8b207d48a6284f529391c5391d96f141': 'Win32/Trojan.Agent.G',
             '0385eeab00e946a302b24a91dea4187c1210597b8e17cd9e2230450f5ece21da': 'Win32/Trojan.HermeticWiper.A',
@@ -74,6 +77,9 @@ def FileScan():
             '9ef7dbd3da51332a78eff19146d21c82957821e464e8133e9594a07d716d892d': 'Win32/Trojan.WhisperGate.C',
             'a196c6b8ffcb97ffb276d04f354696e2391311db3841ae16c8c9f56f36a38e92': 'Win32/Trojan.WhisperGate.D',
             'a2d60af7bebac9b299db109f8162ed6335fb5dda08f57f00e9dc809d4f138428': 'Win64/Ransom.Encrpt3d.A',
+            '698a0348c4bb8fffc806a1f915592b20193229568647807e88a39d2ab81cb4c2': 'Win64/Trojan.IcedID.A',
+            'a17e32b43f96c8db69c979865a8732f3784c7c42714197091866473bcfac8250': 'Win64/Trojan.IcedID.B',
+            '3542d5179100a7644e0a747139d775dbc8d914245292209bc9038ad2413b3213': 'Win64/Trojan.IcedID.C',
         }[threat]
 
     if sha256 == '552a5eeb89f450c448e7cede3233bb04d69e0b106d356f0257634581e9f0aa71': threat = 'Win32/Adware.MegaSearch.A'
