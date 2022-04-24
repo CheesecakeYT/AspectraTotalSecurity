@@ -47,6 +47,7 @@ def FileScan():
             '30b3cbe8817ed75d8221059e4be35d5624bd6b5dc921d4991a7adc4c3eb5de4a': 'Win32/DoS.FiberLake.B',
             '3b2e708eaa4744c76a633391cf2c983f4a098b46436525619e5ea44e105355fe': 'Win32/DoS.FiberLake.C',
             '8dd8b9bd94de1e72f0c400c5f32dcefc114cc0a5bf14b74ba6edc19fd4aeb2a5': 'Win32/DoS.FiberLake.D',
+            '8b8814921dc2b2cb6ea3cfc7295803c72088092418527c09b680332c92c33f1f': 'Win32/Ransom.Nokoyawa.A',
             '2c940a35025dd3847f7c954a282f65e9c2312d2ada28686f9d1dc73d1c500224': 'Win32/Ransom.Pandora.A',
             '5b56c5d86347e164c6e571c86dbf5b1535eae6b979fede6ed66b01e79ea33b7b': 'Win32/Ransom.Pandora.B',
             '4dc13bb83a16d4ff9865a51b3e4d24112327c526c1392e14d56f20d6f4eaf382': 'Win32/Ransom.PartyTicket.A',
